@@ -66,3 +66,9 @@
     font-family: "Oswald", sans-serif;
   }
 }
+
+@layer utilities {
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+}
