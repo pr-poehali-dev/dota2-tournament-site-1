@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -6,31 +6,7 @@ import Icon from '@/components/ui/icon';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
-  const [timeLeft, setTimeLeft] = useState({
-    days: 15,
-    hours: 8,
-    minutes: 32,
-    seconds: 45
-  });
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(prev => {
-        if (prev.seconds > 0) {
-          return { ...prev, seconds: prev.seconds - 1 };
-        } else if (prev.minutes > 0) {
-          return { ...prev, minutes: prev.minutes - 1, seconds: 59 };
-        } else if (prev.hours > 0) {
-          return { ...prev, hours: prev.hours - 1, minutes: 59, seconds: 59 };
-        } else if (prev.days > 0) {
-          return { ...prev, days: prev.days - 1, hours: 23, minutes: 59, seconds: 59 };
-        }
-        return prev;
-      });
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, []);
 
   const teams = [
     { name: 'Team Spirit', region: 'EU', rank: 1, logo: 'https://cdn.poehali.dev/projects/d55c96ab-9ff5-46bf-9afa-2058aa5f3edb/files/7625d633-a9bd-4905-95bb-c35ab17896fd.jpg' },
@@ -101,27 +77,6 @@ const Index = () => {
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-6xl font-bold mb-4 text-primary">КИБЕРСПОРТИВНЫЙ ТУРНИР</h2>
             <p className="text-2xl text-muted-foreground">Битва лучших команд мира</p>
-          </div>
-
-          <div className="max-w-4xl mx-auto mb-16">
-            <Card className="bg-card/80 backdrop-blur-sm border-primary/50">
-              <CardContent className="p-8">
-                <h3 className="text-3xl font-bold text-center mb-8">До начала турнира</h3>
-                <div className="grid grid-cols-4 gap-4">
-                  {[
-                    { label: 'Дней', value: timeLeft.days },
-                    { label: 'Часов', value: timeLeft.hours },
-                    { label: 'Минут', value: timeLeft.minutes },
-                    { label: 'Секунд', value: timeLeft.seconds },
-                  ].map((item) => (
-                    <div key={item.label} className="text-center">
-                      <div className="text-5xl font-bold text-primary mb-2">{item.value.toString().padStart(2, '0')}</div>
-                      <div className="text-muted-foreground uppercase text-sm">{item.label}</div>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
