@@ -128,7 +128,8 @@ const Index = () => {
             <Card className="bg-card/80 backdrop-blur-sm hover-scale transition-all">
               <CardContent className="p-6 text-center">
                 <Icon name="Users" size={48} className="text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2">12 команд</h3>
+                <h3 className="text-xl font-bold mb-2">12 участников
+</h3>
                 <p className="text-muted-foreground">Лучшие из лучших</p>
               </CardContent>
             </Card>
