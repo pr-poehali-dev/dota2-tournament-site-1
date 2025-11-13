@@ -99,7 +99,7 @@ const Index = () => {
         </div>
         <div className="container mx-auto px-4 py-20 relative z-10">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-6xl font-bold mb-4 text-primary">МЕЖДУНАРОДНЫЙ ТУРНИР</h2>
+            <h2 className="text-6xl font-bold mb-4 text-primary">КИБЕРСПОРТИВНЫЙ ТУРНИР</h2>
             <p className="text-2xl text-muted-foreground">Битва лучших команд мира</p>
           </div>
 
