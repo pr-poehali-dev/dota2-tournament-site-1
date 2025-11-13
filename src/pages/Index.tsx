@@ -79,27 +79,19 @@ const Index = () => {
             <p className="text-2xl text-muted-foreground">Битва лучших команд мира</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             <Card className="bg-card/80 backdrop-blur-sm hover-scale transition-all">
               <CardContent className="p-6 text-center">
                 <Icon name="Users" size={48} className="text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2">12 участников
-</h3>
+                <h3 className="text-xl font-bold mb-2">12 участников</h3>
                 <p className="text-muted-foreground">Лучшие из лучших</p>
               </CardContent>
             </Card>
             <Card className="bg-card/80 backdrop-blur-sm hover-scale transition-all">
               <CardContent className="p-6 text-center">
-                <Icon name="DollarSign" size={48} className="text-secondary mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2">$1,000,000</h3>
-                <p className="text-muted-foreground">Призовой фонд</p>
-              </CardContent>
-            </Card>
-            <Card className="bg-card/80 backdrop-blur-sm hover-scale transition-all">
-              <CardContent className="p-6 text-center">
-                <Icon name="Calendar" size={48} className="text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2">14 дней</h3>
-                <p className="text-muted-foreground">Эпичных сражений</p>
+                <Icon name="Award" size={48} className="text-primary mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-2">Борьба за призы</h3>
+                <p className="text-muted-foreground">Эпичные сражения</p>
               </CardContent>
             </Card>
           </div>
